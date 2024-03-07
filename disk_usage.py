@@ -8,7 +8,7 @@ def check_disk_usage(disk, min_absolute, min_percent):
     du = shutil.disk_usage(disk)
     # Calculate the percentage of free space
     percent_free = round(100 * du.free / du.total, 3)
-    print("{}".format(percent_free) + "% unused disk space.")
+    print("{}".format(percent_free) + "% free disk space.")
     # Calculate how many free gigabytes
     gigabytes_free = du.free / 2**30
     if percent_free < min_percent or gigabytes_free < min_absolute:
